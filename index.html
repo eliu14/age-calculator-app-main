@@ -17,25 +17,32 @@
 <body>
   <div class="center">
     <div class="card">
-      <label>DAY
-        <input placeholder="DD" />
-      </label>
-      MONTH
-      MM
+      <div class="info">
+        <label>DAY
+          <input placeholder="DD" maxlength = "2"/>
+        </label>
 
-      YEAR
-      YYYY
-      <button>
-        <svg xmlns="http://www.w3.org/2000/svg" width="46" height="44" viewBox="0 0 46 44">
-          <g fill="none" stroke="#FFF" stroke-width="2">
-            <path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"/>
-          </g>
-        </svg>
-      </button>
+        <label>MONTH
+          <input placeholder="MM" maxlength = "2"/>
+        </label>
+        <label>YEAR
+        <input placeholder="YYYY" maxlength = "4"/>
+        </label>
+      </div>
+      <div class="break">
+        <hr>
+        <button>
+          <svg xmlns="http://www.w3.org/2000/svg" width="46" height="44" viewBox="0 0 46 44">
+            <g fill="none" stroke="#FFF" stroke-width="2">
+              <path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"/>
+            </g>
+          </svg>
+        </button>
+      </div>
       <div class="result">
-        -- years
-        -- months
-        -- days
+        -- years <br>
+        -- months <br>
+        -- days <br>
       </div>
     </div>
   </div>

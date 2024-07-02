@@ -3,6 +3,7 @@
    --red: hsl(0, 100%, 67%);
    --lightGrey: hsl(0, 0%, 86%);
    --white: hsl(0, 0%, 100%);
+   --smokeyGrey: hsl(0, 1%, 44%);
 }
 
 body {
@@ -14,12 +15,33 @@ button {
    background-color: var(--purple);
    border-style: none;
    border-radius: 50%;
+   display: inline-block;
    padding: 2vh;
+   position: relative;
+   margin:0;
 }
+
+hr {
+   display: inline-block;
+   position: relative;
+   padding: 0;
+   margin: 8px auto;
+   height: 0;
+   width: 80%;
+   max-height: 0;
+   font-size: 1px;
+   line-height: 0;
+   clear: both;
+   border: none;
+   border-top: 1px solid #aaaaaa;
+   border-bottom: 1px solid #ffffff;
+}
+
 .card {
    background-color: var(--white);
    height: 50vh;
    border-radius: 5% 5% 50% 5%;
+   padding: 1em;
 }
 
 .center {
@@ -32,4 +54,22 @@ button {
 
 .fonts-loaded body {
    font-family: Poppins, sans-serif;
+}
+
+.info {
+   display:flex;
+   /* justify-content: center; */
+   color: var(--smokeyGrey);
+
+}
+
+.info input {
+   font-size: 2em;
+   width: 4em;
+}
+
+.result {
+   font-size: 4em;
+   font-style:italic;
+   font-weight: 900;
 }
