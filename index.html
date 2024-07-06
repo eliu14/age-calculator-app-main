@@ -12,40 +12,44 @@
     rel="stylesheet"
     />
   <link rel="stylesheet" href="./styles/style.css" />
-  <script src="js/load-fonts.js"></script>
+  <script src="js/load-fonts.js" async></script>
+  <script src="js/logic.js" defer></script>
 </head>
 <body>
-  <div class="center">
-    <div class="card">
-      <div class="info">
-        <label>DAY
-          <input placeholder="DD" maxlength = "2"/>
-        </label>
-
-        <label>MONTH
-          <input placeholder="MM" maxlength = "2"/>
-        </label>
-        <label>YEAR
-        <input placeholder="YYYY" maxlength = "4"/>
-        </label>
+  <div class="card">
+    
+    <div class="info">
+      <div class="inputWrapper">
+        <label for="dayInput">DAY</label>
+        <input id="dayInput" placeholder="DD" maxlength = "2"/ required />
       </div>
-      <div class="break">
-        <hr>
-        <button>
-          <svg xmlns="http://www.w3.org/2000/svg" width="46" height="44" viewBox="0 0 46 44">
-            <g fill="none" stroke="#FFF" stroke-width="2">
-              <path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"/>
-            </g>
-          </svg>
-        </button>
+      <div class="inputWrapper">
+        <label for="monthInput">MONTH</label>
+        <input id="monthInput" placeholder="MM" maxlength = "2" required />
       </div>
-      <div class="result">
-        -- years <br>
-        -- months <br>
-        -- days <br>
+      <div class="inputWrapper">
+        <label for="yearInput">YEAR</label>
+        <input id="yearInput" placeholder="YYYY" maxlength = "4" required />
       </div>
     </div>
+    <div class="break">
+      <hr />
+      <button id="clickMe">
+        <svg xmlns="http://www.w3.org/2000/svg" width="46" height="44" viewBox="0 0 46 44">
+          <g fill="none" stroke="#FFF" stroke-width="2">
+            <path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"/>
+          </g>
+        </svg>
+      </button>
+    </div>
+    
+    <div class="results">
+      <span class="resultText" id="yearResult">- -</span> years <br>
+      <span class="resultText" id="monthResult">- -</span> months <br>
+      <span class="resultText" id="dayResult">- -</span> days <br>
+    </div>
   </div>
+  
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Ellen Liu</a>.

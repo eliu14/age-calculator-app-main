@@ -1,14 +1,22 @@
 :root {
    --purple: hsl(259, 100%, 65%);
    --red: hsl(0, 100%, 67%);
-   --lightGrey: hsl(0, 0%, 86%);
    --white: hsl(0, 0%, 100%);
+   --offWhite: hsl(0, 0%, 94%);
+   --lightGrey: hsl(0, 0%, 86%);
    --smokeyGrey: hsl(0, 1%, 44%);
+   --offBlack: hsl(0, 0%, 8%);
 }
 
 body {
    background-color: var(--lightGrey);
    font-family: sans-serif;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   width: 100%;
 }
 
 button {
@@ -19,6 +27,12 @@ button {
    padding: 2vh;
    position: relative;
    margin:0;
+   /* size:50%; */
+}
+
+button:active {
+   background-color: var(--offBlack);
+   cursor: pointer;
 }
 
 hr {
@@ -39,17 +53,9 @@ hr {
 
 .card {
    background-color: var(--white);
-   height: 50vh;
-   border-radius: 5% 5% 50% 5%;
-   padding: 1em;
-}
-
-.center {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
-   height: 100vh;
+   position: relative;
+   border-radius: 5% 5% 25% 5%;
+   color: var(--offBlack);
 }
 
 .fonts-loaded body {
@@ -57,19 +63,73 @@ hr {
 }
 
 .info {
+   align-items: center;
    display:flex;
-   /* justify-content: center; */
+   flex-direction: row;
    color: var(--smokeyGrey);
-
+   font-weight: 700;
 }
 
 .info input {
-   font-size: 2em;
-   width: 4em;
+   padding: 1rem;
+   border-radius: 5%;
+   font-weight: 700;
 }
 
-.result {
-   font-size: 4em;
-   font-style:italic;
-   font-weight: 900;
+.info input:active {
+   cursor: pointer;
+}
+
+.inputWrapper {
+   margin: 0 1rem;
+}
+
+.inputWrapper label {
+   display: block;
+}
+
+.resultText {
+   color: var(--purple);
+}
+
+@media (max-width: 375px) {
+   .attribution {
+      font-size: 0.70em;
+   }
+   .card {
+      width: 80%;
+      padding: 1rem;
+   }
+   .info {
+      font-size: 1rem;
+   }
+   .info input {
+      font-size: 1rem;
+      margin: auto 0;
+      width: 3rem;
+   }
+   .results{
+      font: italic 800 1.5em "Poppins", sans-serif;
+   }
+}
+
+@media (min-width: 375px) {
+   .attribution {
+      font-size: 1em;
+   }
+   .card {
+      width: 40rem;
+      padding: 5rem;
+   }
+   .info {
+      font-size: 1rem;
+   }
+   .info input {
+      font-size: 1.5rem;
+      margin: auto 0;
+      width: 6rem;
+   }
+   .results{
+      font: italic 800 5em "Poppins", sans-serif;
+   }
 }
