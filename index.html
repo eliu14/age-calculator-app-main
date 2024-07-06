@@ -20,16 +20,19 @@
     
     <div class="info">
       <div class="inputWrapper">
-        <label for="dayInput">DAY</label>
-        <input id="dayInput" placeholder="DD" maxlength = "2"/ required />
+        <label for="dayInput" id="dayLabel">DAY</label>
+        <input id="dayInput" placeholder="DD" maxlength = "2" required />
+        <p class="errorMsg" id="dayError"></p>
       </div>
       <div class="inputWrapper">
-        <label for="monthInput">MONTH</label>
+        <label for="monthInput" id="monthLabel">MONTH</label>
         <input id="monthInput" placeholder="MM" maxlength = "2" required />
+        <p class="errorMsg" id="monthError"></p>
       </div>
       <div class="inputWrapper">
-        <label for="yearInput">YEAR</label>
+        <label for="yearInput" id="yearLabel">YEAR</label>
         <input id="yearInput" placeholder="YYYY" maxlength = "4" required />
+        <p class="errorMsg" id="yearError"></p>
       </div>
     </div>
     <div class="break">

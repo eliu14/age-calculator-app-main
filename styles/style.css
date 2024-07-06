@@ -58,6 +58,19 @@ hr {
    color: var(--offBlack);
 }
 
+.errorMsg {
+   color: var(--red);
+   font-style: italic;
+   font-weight: normal;
+   font-size: 0.75rem;
+   margin: 0.5rem 0;
+   height: 1rem;
+}
+
+.errorFontRed {
+   color: var(--red);
+}
+
 .fonts-loaded body {
    font-family: Poppins, sans-serif;
 }
@@ -86,6 +99,10 @@ hr {
 
 .inputWrapper label {
    display: block;
+}
+
+.red-border {
+   border: 1px solid var(--red);
 }
 
 .resultText {
